@@ -13,8 +13,11 @@ else()
     message(FATAL_ERROR "The compiler ${CMAKE_CXX_COMPILER} has no C++0X or C++11 support. Please choose different C++ compiler.")
 endif()
 
+find_package(kdl_parser REQUIRED)
 find_package(orocos_kdl REQUIRED)
 find_package(Eigen3 REQUIRED)
+find_package(roscpp REQUIRED)
+
 set(Eigen3_INCLUDE_DIRS ${EIGEN3_INCLUDE_DIRS})
 find_package(catkin REQUIRED
   COMPONENTS
